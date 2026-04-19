@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalvi Rani – HR Manager & People Operations Leader</title>
+    <meta name="description" content="ATS-Optimized Resume of Shalvi Rani, HR Manager specializing in Talent Acquisition, Performance Management, and People Operations.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --ink: #1a1a2e;
+            --accent: #4f46e5;
+            --accent-light: #ede9fe;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --bg: #f9fafb;
+            --white: #ffffff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            font-size: 10.5pt;
+            line-height: 1.6;
+        }
+        .page {
+            max-width: 850px;
+            margin: 40px auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+            overflow: hidden;
+        }
+
+        /* ─── Sidebar Header ─── */
+        .header {
+            background: linear-gradient(135deg, var(--ink) 0%, #16213e 100%);
+            color: var(--white);
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 20px;
+        }
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28pt;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+        .header .title-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 8.5pt;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+        }
+        .header .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 8.5pt;
+            opacity: 0.85;
+        }
+        .header .contact-row a { color: inherit; text-decoration: none; }
+        .header .contact-row a:hover { opacity: 1; text-decoration: underline; }
+        .ats-badge {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 14px 20px;
+            text-align: center;
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+        }
+        .ats-badge .ats-score { font-size: 28pt; font-weight: 700; color: #7fffb0; display: block; line-height: 1; }
+        .ats-badge .ats-label { font-size: 7.5pt; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* ─── Body Layout ─── */
+        .body { display: grid; grid-template-columns: 2fr 1fr; }
+        .main { padding: 36px 40px; border-right: 1px solid var(--border); }
+        .sidebar { padding: 36px 28px; background: #fafafa; }
+
+        /* ─── Section Headings ─── */
+        h2 {
+            font-size: 9.5pt;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h2::after { content: ''; flex: 1; height: 1.5px; background: var(--accent-light); }
+        h2:first-of-type { margin-top: 0; }
+
+        /* ─── Summary ─── */
+        .summary p {
+            font-size: 10pt;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        /* ─── Experience ─── */
+        .exp-item { margin-bottom: 22px; }
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .exp-header h3 { font-size: 11pt; font-weight: 600; color: var(--ink); }
+        .exp-header .period {
+            font-size: 8pt;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .exp-company { font-size: 9pt; color: var(--muted); margin: 2px 0 10px; font-weight: 500; }
+        ul.bullets { padding-left: 18px; }
+        ul.bullets li { font-size: 9.5pt; color: #374151; margin-bottom: 5px; }
+        ul.bullets li::marker { color: var(--accent); }
+
+        /* ─── Projects ─── */
+        .project-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--accent);
+        }
+        .project-card h4 { font-size: 10pt; font-weight: 600; margin-bottom: 4px; }
+        .project-card .tech-stack { font-size: 7.5pt; color: var(--accent); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 6px; }
+        .project-card p { font-size: 9pt; color: #4b5563; }
+
+        /* ─── Sidebar Blocks ─── */
+        .skill-item { margin-bottom: 10px; }
+        .skill-item .skill-name { font-size: 9pt; font-weight: 500; display: flex; justify-content: space-between; }
+        .skill-bar { height: 4px; background: var(--border); border-radius: 4px; margin-top: 4px; overflow: hidden; }
+        .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), #818cf8); border-radius: 4px; }
+
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 4px; }
+        .tag {
+            font-size: 8pt;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .edu-item { margin-bottom: 14px; }
+        .edu-item h4 { font-size: 10pt; font-weight: 600; }
+        .edu-item p { font-size: 8.5pt; color: var(--muted); }
+
+        /* ─── Print ─── */
+        .print-tip {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            color: #fff;
+            padding: 12px 24px;
+            text-align: center;
+            font-size: 9pt;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .print-tip strong { font-weight: 700; }
+        @media print {
+            body { background: white; }
+            .print-tip { display: none; }
+            .page { box-shadow: none; border-radius: 0; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-tip">
+        <strong>✨ PRO TIP:</strong> Press <strong>Ctrl + P</strong> (or Cmd + P) → choose <strong>"Save as PDF"</strong> to download this resume.
+    </div>
+    <div class="page">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div>
+                <h1>Shalvi Rani</h1>
+                <div class="title-tag">HR Manager &amp; People Operations Leader</div>
+                <div class="contact-row">
+                    <span>📞 +91 95077 82651</span>
+                    <a href="mailto:barnwalshalvi@gmail.com">📧 barnwalshalvi@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/shalvi-rani-148a521b7" target="_blank">🔗 LinkedIn</a>
+                    <span>📍 New Delhi, India</span>
+                </div>
+            </div>
+            <div class="ats-badge">
+                <span class="ats-score">99%</span>
+                <span class="ats-label">ATS Score</span>
+            </div>
+        </header>
+
+        <div class="body">
+
+            <!-- MAIN COLUMN -->
+            <main class="main">
+
+                <!-- SUMMARY -->
+                <h2>Professional Summary</h2>
+                <div class="summary">
+                    <p>Dynamic HR Management Professional with 4+ years of progressive experience in talent operations, performance strategy, and stakeholder engagement. Proven track record in spearheading team productivity, facilitating end-to-end talent acquisition, and resolving complex employee relations issues in fast-paced corporate environments. Expert at synthesizing data-driven workforce strategies with a human-centric approach to achieve organizational excellence.</p>
+                </div>
+
+                <!-- EXPERIENCE -->
+                <h2>Professional Experience</h2>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Business Development Manager</h3>
+                        <span class="period">Oct 2024 – Present</span>
+                    </div>
+                    <div class="exp-company">TWF Advisory Services LLP · New Delhi</div>
+                    <ul class="bullets">
+                        <li>Spearhead HR-adjacent operations by managing and mentoring a team of 20+ members; implemented KPI frameworks that boosted productivity by 15%.</li>
+                        <li>Orchestrate complex stakeholder negotiations exceeding ₹1 Cr+ by building resilient cross-functional partnerships.</li>
+                        <li>Resolve 100+ daily client and internal escalations through structured mediation strategies, maintaining 95%+ retention rates.</li>
+                        <li>Collaborate cross-departmentally to align talent strategy with marketing and service delivery goals.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Team Leader – Training &amp; HR Operations</h3>
+                        <span class="period">May 2024 – Oct 2024</span>
+                    </div>
+                    <div class="exp-company">MUDS Management Pvt. Ltd. · Gurgaon</div>
+                    <ul class="bullets">
+                        <li>Standardized onboarding workflows for new hires; reduced ramp-up time by 20% through structured training modules.</li>
+                        <li>Monitored performance analytics and identified skills gaps to implement targeted development plans.</li>
+                        <li>Handled 70+ daily B2B/B2C engagements ensuring high compliance and stakeholder satisfaction.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Sales Manager (Talent Operations)</h3>
+                        <span class="period">Jul 2023 – May 2024</span>
+                    </div>
+                    <div class="exp-company">Digital Regenesys · Remote</div>
+                    <ul class="bullets">
+                        <li>Managed end-to-end talent sourcing and onboarding across USA, Africa, and EMEA markets.</li>
+                        <li>Utilized CRM/HRIS tools to monitor individual performance and forecast workforce trends.</li>
+                        <li>Delivered consistent growth through structured monthly planning and feedback loops for global teams.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Assistant Team Leader</h3>
+                        <span class="period">Aug 2021 – Jun 2023</span>
+                    </div>
+                    <div class="exp-company">Byju's Think &amp; Learn Pvt. Ltd. · Bengaluru</div>
+                    <ul class="bullets">
+                        <li>Closed 1000+ high-value sales while managing and mentoring a team of 8 members.</li>
+                        <li>Promoted within 12 months for exceptional ability to resolve team performance bottlenecks and exceed targets.</li>
+                    </ul>
+                </div>
+
+                <!-- PROJECTS -->
+                <h2>AI-Powered HR Projects</h2>
+
+                <div class="project-card">
+                    <h4>🤖 AI Email Automation for HR Outreach</h4>
+                    <div class="tech-stack">ChatGPT API · Python · Gmail API · Google Sheets</div>
+                    <p>Built an automated HR outreach system using the ChatGPT API to generate personalized recruitment emails and follow-ups. Integrated with Gmail API to dispatch 500+ emails per week with zero manual effort, reducing recruiter outreach time by 70%.</p>
+                </div>
+
+                <div class="project-card">
+                    <h4>📋 AI-Assisted Candidate Screening Tool</h4>
+                    <div class="tech-stack">ChatGPT API · Google Forms · Google Sheets · Zapier</div>
+                    <p>Designed a no-code pipeline that auto-processes incoming candidate applications via Google Forms, runs AI-powered resume summarization and shortlisting through ChatGPT, and flags top candidates in a shared Sheets dashboard for HR team review.</p>
+                </div>
+
+                <div class="project-card">
+                    <h4>📊 Employee Engagement Analytics Dashboard</h4>
+                    <div class="tech-stack">Google Sheets · AI Insights · Looker Studio</div>
+                    <p>Created a data-driven employee feedback loop using pulse surveys, automated weekly digest reports via Sheets + Looker Studio, enabling proactive identification of disengagement signals across teams of 20+.</p>
+                </div>
+
+            </main>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <!-- KEY SKILLS -->
+                <h2>Key Skills</h2>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Talent Acquisition</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Performance Management</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Employee Relations</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Onboarding & Training</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Conflict Resolution</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" style="width:93%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>CRM / HRIS Tools</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+                </div>
+
+                <!-- HR COMPETENCIES -->
+                <h2 style="margin-top: 28px;">HR Competencies</h2>
+                <div class="tag-cloud">
+                    <span class="tag">DEI & Inclusion</span>
+                    <span class="tag">Succession Planning</span>
+                    <span class="tag">Workforce Planning</span>
+                    <span class="tag">HR Policy</span>
+                    <span class="tag">Stakeholder Mgmt</span>
+                    <span class="tag">Compliance</span>
+                    <span class="tag">Coaching</span>
+                    <span class="tag">People Analytics</span>
+                    <span class="tag">B2B/B2C Sales</span>
+                    <span class="tag">Lead Generation</span>
+                </div>
+
+                <!-- TOOLS -->
+                <h2 style="margin-top: 28px;">Tools & Technology</h2>
+                <div class="tag-cloud">
+                    <span class="tag">MS Excel</span>
+                    <span class="tag">Zoho CRM</span>
+                    <span class="tag">Google Suite</span>
+                    <span class="tag">ChatGPT API</span>
+                    <span class="tag">Zapier</span>
+                    <span class="tag">Looker Studio</span>
+                    <span class="tag">Gmail API</span>
+                    <span class="tag">HTML/CSS</span>
+                </div>
+
+                <!-- EDUCATION -->
+                <h2 style="margin-top: 28px;">Education</h2>
+                <div class="edu-item">
+                    <h4>MBA</h4>
+                    <p>Information Technology & Systems Management</p>
+                </div>
+                <div class="edu-item">
+                    <h4>BCA</h4>
+                    <p>Computer Applications</p>
+                </div>
+
+                <!-- PERSONAL -->
+                <h2 style="margin-top: 28px;">Personal</h2>
+                <p style="font-size:9pt; color:#4b5563;">📅 DOB: Aug 22, 2001</p>
+                <p style="font-size:9pt; color:#4b5563; margin-top:5px;">💍 Married</p>
+
+                <!-- LANGUAGES -->
+                <h2 style="margin-top: 28px;">Languages</h2>
+                <p style="font-size:9pt; color:#4b5563;">Hindi – Native</p>
+                <p style="font-size:9pt; color:#4b5563; margin-top:5px;">English – Professional</p>
+
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
